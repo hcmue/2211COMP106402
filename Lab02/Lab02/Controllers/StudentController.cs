@@ -24,5 +24,16 @@ namespace Lab02.Controllers
             }
             return View(sinhVien);
         }
+
+        public IActionResult ReadData(string type)
+        {
+            var studentModel = new Student();
+            if(type == "JSON")
+            {
+                var jsonString = System.IO.File.ReadAllText(JsonFullPath);
+                studentModel = JsonSerializer.Deserialize<Student>(jsonString);
+            }
+            return View("Index", studentModel);
+        }
     }
 }
