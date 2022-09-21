@@ -9,6 +9,7 @@ namespace TruyenNhanDuLieu.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult Calculate(double SoHang01, double SoHang02, string PhepToan)
         {
             ViewBag.SoHang01 = SoHang01;
