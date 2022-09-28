@@ -1,4 +1,7 @@
-﻿namespace DemoBuoi04.Models
+﻿using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace DemoBuoi04.Models
 {
     public static class MyExtension
     {
@@ -12,5 +15,7 @@
         {
             return Math.Abs((start - end).Days);
         }
+
+        public static IHtmlContent HelloWorld(this IHtmlHelper helper) => new HtmlString("<h1> Hello, World </h1>");
     }
 }
