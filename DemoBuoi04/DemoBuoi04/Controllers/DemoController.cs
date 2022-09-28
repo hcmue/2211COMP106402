@@ -6,6 +6,11 @@ namespace DemoBuoi04.Controllers
 {
     public class DemoController : Controller
     {
+        public string TetSapDen()
+        {
+            var soNgay = DateTime.Now.DemSoNgay(new DateTime(2023, 1, 21));
+            return $"Còn {soNgay} nữa đến Tết";
+        }
         public IActionResult DongBo()
         {
             var sw = new Stopwatch();
