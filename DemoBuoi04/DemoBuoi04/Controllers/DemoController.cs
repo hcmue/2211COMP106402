@@ -19,5 +19,21 @@ namespace DemoBuoi04.Controllers
                 Total = sw.ElapsedMilliseconds
             });
         }
+
+        public async Task<IActionResult> BatDongBo()
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+            var a = Demo.AAsync();
+            var b = Demo.BAsync();
+            var c = Demo.CAsync();
+            await a; await b; await c;
+            sw.Stop();
+            return Json(new
+            {
+                Type = "Async",
+                Total = sw.ElapsedMilliseconds
+            });
+        }
     }
 }
