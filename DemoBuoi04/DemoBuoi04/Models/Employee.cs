@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace DemoBuoi04.Models
 {
@@ -13,6 +14,7 @@ namespace DemoBuoi04.Models
 
         [Display(Name ="Mã nhân viên")]
         [MinLength(4, ErrorMessage ="Tối thiểu 4 kí tự")]
+        [Remote(controller:"Employee", action:"KiemTraMaNVTrung")]
         public string EmployeeNo { get; set; }
 
         [MinLength(4, ErrorMessage = "Tối thiểu 4 kí tự")]
