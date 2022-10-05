@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "DangKy";
+}
+
+<h1>DangKy</h1>
+
+<form id="frmDangKy">
+    Name: <input name="HoTen" />
+    <br />
+    Tuổi: <input name="Tuoi" />
+    <br />
+    Di động: <input name="DienThoai" />
+    <br />
+    <button>Đăng ký</button>
+</form>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script>
+        function kiemTraSoDienThoai(value, element){
+            let pattern = /^0[5789][0-9]{8}$/g;
+            return this.optional(element) || pattern.test(value);
+        }
+
+        $.validator.addMethod("didong", kiemTraSoDienThoai, 
+                "Sai format số di động");
+        $(document).ready(function(){
+            $("#frmDangKy").validate({
+                rules:{
+                    DienThoai: { didong : true},
+                    HoTen: {required: true, minlength: 4}
+                },
+                messages:{
+                    HoTen: { required: "*", minlength : "Tối thiểu 4 kí tự"}
+                }
+            });
+        });
+    </script>
+}

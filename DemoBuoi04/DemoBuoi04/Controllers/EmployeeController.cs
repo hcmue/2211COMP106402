@@ -5,6 +5,16 @@ namespace DemoBuoi04.Controllers
 {
     public class EmployeeController : Controller
     {
+        public IActionResult DangKyThanhVien()
+        {
+            return View();
+        }
+
+        public IActionResult DangKy()
+        {
+            return View();
+        }
+
         public IActionResult KiemTraMaNVTrung(string EmployeeNo)
         {
             var dsNhanVien = new string[] { "admin", "7777", "account"};
