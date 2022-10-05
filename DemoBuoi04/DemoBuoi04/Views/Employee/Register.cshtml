@@ -1,0 +1,25 @@
+﻿@model DemoBuoi04.Models.Employee
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Đăng ký thành viên</h1>
+<form asp-action="Register">
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for="EmployeeNo"></label>
+        <input asp-for="EmployeeNo" />
+        <span asp-validation-for="EmployeeNo"></span>
+    </div>
+
+    <div>
+        <label asp-for="BirthDate"></label>
+        <input asp-for="BirthDate" />
+        <span asp-validation-for="BirthDate"></span>
+    </div>
+    <div>
+        <button>Đăng ký</button>
+    </div>
+</form>
+

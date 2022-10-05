@@ -30,6 +30,7 @@ namespace DemoBuoi04.Models
 
         [Display(Name = "Ngày sinh")]
         [DataType(DataType.Date)]
+        [BirthDateCheck]
         public DateTime BirthDate { get; set; }
 
         [Display(Name ="Mật khẩu")]
