@@ -31,6 +31,7 @@ namespace DemoBuoi04.Models
         [Display(Name = "Ngày sinh")]
         [DataType(DataType.Date)]
         [BirthDateCheck]
+        [CheckOverDate(ErrorMessage ="Quá tuổi làm việc")]
         public DateTime BirthDate { get; set; }
 
         [Display(Name ="Mật khẩu")]

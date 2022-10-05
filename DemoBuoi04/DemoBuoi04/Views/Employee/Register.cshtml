@@ -7,15 +7,15 @@
 <form asp-action="Register">
     <div asp-validation-summary="All"></div>
 
-    <div>
-        <label asp-for="EmployeeNo"></label>
-        <input asp-for="EmployeeNo" />
+    <div class="form-group mt-2">
+        <label asp-for="EmployeeNo" class="form-label"></label>
+        <input asp-for="EmployeeNo" class="form-control" />
         <span asp-validation-for="EmployeeNo"></span>
     </div>
 
-    <div>
-        <label asp-for="BirthDate"></label>
-        <input asp-for="BirthDate" />
+    <div class="form-group mt-2">
+        <label asp-for="BirthDate" class="form-label"></label>
+        <input asp-for="BirthDate" class="form-control" />
         <span asp-validation-for="BirthDate"></span>
     </div>
     <div>
