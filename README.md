@@ -8,4 +8,7 @@ Công nghệ NET lớp thứ 4
 ## Layout:
 * Cách xây dựng layout
 	* Tạo template Razor Layout
-	* Phải có duy nhất Render()
+	* Phải có duy nhất RenderBody()
+	* Có thể có nhiều RenderSection()
+* PartialView
+	* Phần nhỏ của View

@@ -11,9 +11,14 @@
 <body>
     <div class="container">
         <header id="myheader"></header>
-        <div id="mycontent">
-            @RenderBody()
-        </div>        
+        <div id="mycontent" class="row">
+            <div class="col-3">
+                @await Html.PartialAsync("DanhMuc")
+            </div>
+            <div class="col-9">
+                @RenderBody()
+            </div>
+        </div>
         <footer id="myfooter">
             Bản quyền thuộc về &copy;HCMUE
         </footer>
