@@ -5,8 +5,15 @@ namespace DemoBuoi04.Controllers
 {
     public class EmployeeController : Controller
     {
+        public string KiemTraMaBaoMat(string MaBaoMat)
+        {
+            return HttpContext.Session.GetString("MaBaoMat") == MaBaoMat ? "true" : "false";
+        }
         public IActionResult DangKyThanhVien()
         {
+            var maCode = MyTool.GenerateCode();
+            HttpContext.Session.SetString("MaBaoMat", maCode);
+            ViewBag.MaBaoMat = maCode;
             return View();
         }
 

@@ -63,7 +63,7 @@
     <div class="row m-1">
         <div class="col-4 col-md-3 text-right">Mã bảo mật</div>
         <div class="col-8 col-md-9">
-            <span></span>
+            <span class="text-danger">@ViewBag.MaBaoMat</span>
             <input name="MaBaoMat" placeholder="Mã bảo mật" class="w-100" />
         </div>
     </div>
@@ -101,9 +101,11 @@
         $(document).ready(function () {
             $("#frmDangKy").validate({
                 rules: {
-                    Email: { required: true, email: true, gmail : true}
+                    Email: { required: true, email: true, gmail : true},
+                    MaBaoMat: { remote: "/Employee/KiemTraMaBaoMat"}
                 },
                 messages: {
+                    MaBaoMat: { remote: "Chưa đúng mã" },
                     Email: { required: "*", email: "Chưa đúng định dạng" }
                 }
             });
