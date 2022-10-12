@@ -5,6 +5,11 @@ namespace DemoBuoi04.Controllers
 {
     public class EmployeeController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public string KiemTraMaBaoMat(string MaBaoMat)
         {
             return HttpContext.Session.GetString("MaBaoMat") == MaBaoMat ? "true" : "false";
