@@ -1,0 +1,13 @@
+@model IEnumerable<DemoBuoi04.Models.CategoryModel>
+<div class="card">
+    <ul class="list-group">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <a asp-route-id="@item.Id">
+                    @item.Name
+                </a>
+            </li>
+        }
+    </ul>
+</div>

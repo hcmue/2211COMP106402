@@ -2,7 +2,7 @@
 Công nghệ NET lớp thứ 4
 
 # Buổi 07 (19/10/2022)
-* Areas: Phân vùng (dễ quản lý)
+## Areas: Phân vùng (dễ quản lý)
 	* Right click project chọn ```New Scaffolded Item```, chọn MVC  Area, đặt tên area ==> có sẵn Controllers, Models, Views
 	* Tạo mới 1 controller, nhớ thêm property:
 	```cs
@@ -15,6 +15,13 @@ Công nghệ NET lớp thứ 4
 		pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 	```
 	* Nhớ tạo ```_ViewStart.cshtml``` và ```_ViewImports.cshtml``` trong thư mục Views của Area
+
+## ViewComponent
+	* Tạo thư mục tên gì cũng được, nên ```ViewComponents```
+	* Tạo class ```XYZViewComponent``` kế thừa từ ViewComponent
+	* Implement cho method Invoke()
+	* Tạo View hiển thị kết quả (thường là ```Default.cshtm```). Cấu trúc thư mục của View: ```~/Views/Shared/Components/<viewcomponent_name>/Default.cshtml```
+	* Chèn: @await Component.InvokeAsync("Category")
 
 # Buổi 06 (12/10/2022)
 ## jQuery validation:
