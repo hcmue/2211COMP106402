@@ -1,8 +1,12 @@
+using DemoBuoi04.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
+
+builder.Services.AddScoped<ICategoryRepository, MemoryCategoryRepository>();
 
 var app = builder.Build();
 
