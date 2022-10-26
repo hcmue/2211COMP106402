@@ -6,7 +6,8 @@ Công nghệ NET lớp thứ 4
 ## Cài thư viện EFCore
 * Tools > NuGet Package Manager > Package Manager Console
 * Powershell
+```
 Install-Package Microsoft.EntityFrameworkCore
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 Install-Package Microsoft.EntityFrameworkCore.Tools
-
+```
