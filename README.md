@@ -26,3 +26,15 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
         public DbSet<Loai> Loais { get; set; }
         public DbSet<HangHoa> HangHoas { get; set; }
 	```
+* B3: Tạo chuỗi kết nối ở appsettings.json
+```
+  "ConnectionStrings": {
+    "MyConnectionString": "Server=.; Database=2211COMP106402; Integrated Security=True"
+  },
+```
+* B4: Đăng ký dịch vụ MyDbContext ở file Program.cs
+```cs
+builder.Services.AddDbContext<MyDbContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString"));
+});
+```
