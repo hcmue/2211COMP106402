@@ -38,3 +38,6 @@ builder.Services.AddDbContext<MyDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString"));
 });
 ```
+* B5: Tạo migration và dựng CSDL
+    * PM> ```Add-Migration LoaiHangHoa``
+    * PM> ```Update-Database```
