@@ -29,3 +29,8 @@ PM > ```Scaffold-DbContext "Server=.; Database=MyeStoreK4602;Integrated Security
 builder.Services.AddDbContext<MyeStoreK4602Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyStore")));
 
 ```
+
+
+
+# ChartJS
+https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started
