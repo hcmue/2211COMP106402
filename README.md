@@ -26,6 +26,6 @@ PM > ```Scaffold-DbContext "Server=.; Database=MyeStoreK4602;Integrated Security
 	```
 * Đăng ký
 ```cs
-builder.Services.AddDbContext<MyeStoreK46Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyStore")));
+builder.Services.AddDbContext<MyeStoreK4602Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyStore")));
 
 ```
