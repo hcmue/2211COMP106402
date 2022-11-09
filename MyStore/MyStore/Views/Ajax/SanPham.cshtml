@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "SanPham";
+}
+
+<h1>Danh sách sản phẩm</h1>
+<div id="result"></div>
+<button id="loadMore" type="button" onclick="layHangHoa()">Load more</button>
+@section Scripts{
+    <script>
+        let tongSoTrang = @ViewBag.TongSoTrang;
+        let trangHienTai = 0; //chưa hợp lệ
+        function layHangHoa() {
+            if (trangHienTai < tongSoTrang){
+                trangHienTai++;
+                $.ajax({
+                    url: "/Ajax/LaySanPham",
+                    data: {page: trangHienTai},
+                    success: function (res) {
+                        $("#result").html($("#result").html() + res);
+                        if (trangHienTai === tongSoTrang){
+                            $("#loadMore").hide();
+                        }
+                    }
+                });
+            }
+        }
+        layHangHoa();
+    </script>
+}

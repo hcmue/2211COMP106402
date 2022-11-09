@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MyStore.Models.HangHoaVM>
+
+@foreach(var hh in Model){
+    <div style="width:200px; height: 250px; border: 1px solid blue; display: inline-block;">
+        <img src="~/Hinh/HangHoa/@hh.Hinh" width="90%" height="90%">
+        <h4>@hh.TenHh</h4>
+    </div>
+}
