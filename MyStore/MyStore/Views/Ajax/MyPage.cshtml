@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "MyPage";
+}
+
+<h1>MyPage</h1>
+<div id="dongHo" class="text-danger"></div>
+@section Scripts{
+    <script>
+        function layGioServer() {
+            $.ajax({
+                url: "/Ajax/ServerTime",
+                type: "POST",
+                success: function(response){
+                    $("#dongHo").html(response);
+                }
+            });
+        }
+        layGioServer();
+        setInterval(layGioServer, 1000);
+    </script>
+}
